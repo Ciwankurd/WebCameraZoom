@@ -23,7 +23,7 @@
     async function getMedia() {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({
-                video: {pan: true, tilt: true, zoom: true},
+                video: {facingMode: "environment", pan: true, tilt: true, zoom: true},
             });
             const video = document.querySelector('video');
             video.srcObject = stream;
